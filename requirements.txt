@@ -1,0 +1,7 @@
+azure-cosmos
+flask
+redis
+numpy
+SciPy
+scikit-learn
+nltk

@@ -1,0 +1,85 @@
+<!-- templates/search.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 11</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #343a40;
+        }
+
+        .search-form {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .button-container {
+            margin-bottom: 20px;
+        }
+
+        .chart-container {
+            margin-bottom: 20px;
+        }
+
+        .response-time {
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Question 11</h1>
+        <form id="searchForm" class="search-form">
+            <input type="text" id="cityName" name="city" placeholder="Enter City Name" required>
+            <input type="text" id="stateName" name="state" placeholder="Enter State Name" required>
+            <button type="submit">Search</button>
+        </form>
+        <div class="button-container">
+            <button id="prevPage">Previous Page</button>
+            <button id="nextPage">Next Page</button>
+        </div>
+        <div class="chart-container">
+            <canvas id="lineChart" width="800" height="400"></canvas>
+        </div>
+        <p class="response-time">Response Time: <span id="responseTime"></span> ms</p>
+    </div>
+    <script src="{{ url_for('static', filename='search2script.js') }}"></script>
+</body>
+</html>

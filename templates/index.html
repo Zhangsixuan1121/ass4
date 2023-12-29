@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhang sixuan</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div style="flex: 1;min-width: 300px;">
+        <div className="Liu">
+            <h2>Liu shuaitong 76015</h2>
+        </div>
+        <div className="picture1">
+            <img src="static/liushuaitong.jpg" width="200" height="200"/>
+        </div>
+        <div className="Liu">
+            <h2>Zhang Sixuan 76019</h2>
+        </div>
+        <div className="picture1">
+            <img src="static/zhangsixuan.jpg" width="200" height="200"/>
+        </div>
+    </div>
+    <h1>Click the button to go to the corresponding page:</h1>
+
+    <form action="/q10" method="get">
+        <button type="submit">question10</button>
+    </form>
+
+    <form action="/q11" method="get">
+        <button type="submit">question11</button>
+    </form>
+
+    <form action="/q12q13" method="get">
+        <button type="submit">question12&&question13</button>
+    </form>
+
+</body>
+</html>
+

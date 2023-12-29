@@ -1,0 +1,83 @@
+<!-- templates/search.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 12 && Question 13</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #343a40;
+        }
+
+        .search-form {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            margin: 0 5px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            width: 100px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .chart-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .response-time {
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Question 12 && Question 13</h1>
+        <form id="searchForm" class="search-form" method="POST" action="/search3">
+            <input type="number" id="classesInput" name="classes" placeholder="Enter number of classes" value="6" required>
+            <input type="number" id="kInput" name="k" placeholder="Enter K value" value="3" required>
+            <input type="number" id="wordsInput" name="words" placeholder="Enter number of words" value="100" required>
+            <button type="submit">Analyze</button>
+        </form>
+        <p class="response-time">Response Time: <span id="responseTime"></span> ms</p>
+        <div class="chart-container">
+            <canvas id="barChart" width="800" height="400"></canvas>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='search3script.js') }}"></script>
+</body>
+</html>
